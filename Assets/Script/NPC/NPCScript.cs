@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -42,7 +43,7 @@ public class NPCScript : MonoBehaviour
 
         #endregion Mouse Click
 
-        //#region Patroll Movement
+        #region Patroll Movement
         //if (Vector3.Distance(transform.position, destination) < 1f)
         //{
         //    //    childrenIndex++;
@@ -50,9 +51,7 @@ public class NPCScript : MonoBehaviour
         //    //    destination = path.GetChild(childrenIndex).position;
         //    //    GetComponent<NavMeshAgent>().SetDestination(destination);
         //}
-
-
-        //#endregion
+        #endregion
 
         #region Random Patroll 
         if (Vector3.Distance(transform.position, destination) < 1f)
@@ -113,16 +112,6 @@ public class NPCScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-
-            SceneManager.LoadScene("FinishMenu");
-
-        }
-    }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -131,6 +120,8 @@ public class NPCScript : MonoBehaviour
 
         }
     }
+
+
 
 
 }
