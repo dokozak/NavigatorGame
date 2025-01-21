@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinishMenu.unity
     guid: fe82e2b2f70561248b7f57ebd9e3b33c
+  - enabled: 1
+    path: Assets/Scenes/DificultOfGame.unity
+    guid: a2617926541da85419d5e364d346973d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

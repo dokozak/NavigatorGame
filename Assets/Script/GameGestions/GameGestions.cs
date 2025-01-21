@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameGestions : MonoBehaviour
 {
     public static int money = 0;
-    public const int winMoney = 15;
+    public static int winMoney = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

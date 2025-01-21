@@ -18,4 +18,11 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void moveToGame(int dificult)
+    {
+        DificultOfTheGame.dificulty = dificult;
+        //Change the scene
+        SceneManager.LoadScene("Game");
+    }
 }

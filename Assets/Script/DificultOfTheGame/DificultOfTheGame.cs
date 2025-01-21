@@ -1,3 +1,4 @@
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class DificultOfTheGame : MonoBehaviour
@@ -14,19 +15,29 @@ public class DificultOfTheGame : MonoBehaviour
     public GameObject[] toBeEnableHard;
     public GameObject[] toBeDisableHard;
 
+    public GameObject plataform;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         switch (dificulty) {
         case EASY:
+                plataform.GetComponent<NavMeshSurface>().navMeshData = null;
+                plataform.GetComponent<NavMeshSurface>().BuildNavMesh();
+                GameGestions.winMoney = 7;
                 break;
         case HARD:
                 for (int i = 0; i < toBeEnableHard.Length; i++) toBeEnableHard[i].SetActive(true);
-                for (int i = 0; i < toBeDisableHard.Length; i++) toBeDisableHard[i].SetActive(false);
-                goto case MEDIUM;
+                for (int i = 0; i < toBeDisableHard.Length; i++) Destroy(toBeDisableHard[i]);
+                for (int i = 0; i < toBeEnableMedium.Length; i++) toBeEnableMedium[i].SetActive(true);
+                GameGestions.winMoney = 15;
+                break;
         
         case MEDIUM:
                 for (int i = 0; i < toBeEnableMedium.Length; i++) toBeEnableMedium[i].SetActive(true);
+                plataform.GetComponent<NavMeshSurface>().navMeshData = null;
+                plataform.GetComponent<NavMeshSurface>().BuildNavMesh();
+                GameGestions.winMoney = 7;
                 break;
         
         }
