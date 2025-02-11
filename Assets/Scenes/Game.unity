@@ -2154,18 +2154,30 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   path: {fileID: 1260814940}
   childrenIndex: 0
---- !u!114 &780389721
-MonoBehaviour:
+  target: {fileID: 0}
+  detection_delay: 0.5
+  visionAngle: 80
+--- !u!135 &780389721
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780389711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eff185aa2d6e79419fda5acc8a2be60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 3
+  m_Radius: 1.465533
+  m_Center: {x: 0, y: 0.9938469, z: -0.028313875}
 --- !u!1 &785285788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4080,10 +4092,10 @@ PrefabInstance:
       addedObject: {fileID: 780389715}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ff9296b5f2b02b94dace2ac4bddee192, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 780389721}
+      addedObject: {fileID: 780389720}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ff9296b5f2b02b94dace2ac4bddee192, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 780389720}
+      addedObject: {fileID: 780389721}
   m_SourcePrefab: {fileID: 100100000, guid: ff9296b5f2b02b94dace2ac4bddee192, type: 3}
 --- !u!1 &1523688342
 GameObject:

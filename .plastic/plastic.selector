@@ -1,0 +1,4 @@
+repository "3DARFundation/NavigatorGame@6872223904031@cloud"
+  path "/"
+    br "/main"
+    co "/main"
